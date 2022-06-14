@@ -11,6 +11,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 255, 255);
+    line-height: 1.5em;
 }
 
 #biography {
@@ -91,4 +92,12 @@ button:hover {
 
 .project-card > * {
     margin-top: 0.6em;
+}
+
+#about {
+    padding: 5em;
+}
+
+#about > * {
+    padding-top: 1em;
 }

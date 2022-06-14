@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* ----- general ----- */
+
 * {
     padding: 0;
     margin: 0;
     border-width: 0;
 }
-
-/* ----- first section ----- */
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -14,11 +14,33 @@ body {
     line-height: 1.5em;
 }
 
+/* ----- nav bar ----- */
+
+.navbar {
+    text-decoration: none;
+    /* background-color: whitesmoke; */
+    background-color: #734a9c; 
+    padding: 1em;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+.navbar > * {
+    margin-right: 2em;
+    font-weight: 500;
+}
+
+/* ----- bio ----- */
+
 #biography {
     display: flex;
     flex-direction: row;
     padding: none;
-    background-color: rgba(236, 183, 223, 0.903);
+    background-color: rgba(248, 202, 237, 0.903);
 }
 
 img {
@@ -29,6 +51,8 @@ img {
 
 h1 {
     font-size: 3em;
+    line-height: 1.3em;
+    color: #734a9c; 
 }
 
 #bio-description {
@@ -59,9 +83,21 @@ button {
 }
 
 button:hover {
-    background-color: #734a9c; /* Green */
+    background-color: #734a9c; 
     color: white;
 }
+
+/* ----- about ----- */
+
+#about {
+    padding: 5em;
+}
+
+#about > * {
+    padding-top: 1em;
+}
+
+/* ----- portfolio ----- */
 
 #portfolio {
     padding-top: 3em;
@@ -94,10 +130,22 @@ button:hover {
     margin-top: 0.6em;
 }
 
-#about {
-    padding: 5em;
-}
+/* ----- smaller desktop & mobile ----- */
 
-#about > * {
-    padding-top: 1em;
+@media only screen and (max-width: 800px) {
+    #biography {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        /* margin-top: -2em; */
+    }
+
+    #about {
+        text-align: center;
+    }
+
+    #bio-profile {
+        display: none;
+    }
 }

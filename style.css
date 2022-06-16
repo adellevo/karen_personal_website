@@ -12,6 +12,32 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(255, 255, 255);
     line-height: 1.5em;
+    background-image: url("photos/background.png");
+}
+
+:root {
+    --purple: #734a9c;
+    --purple-shade: #f2e6fdf3;
+    --light-purple: rgba(236, 196, 240, 0.597); 
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--purple);
+    border: 0.3em solid var(--purple);
+    border-radius: 10em;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 80%;
 }
 
 /* ----- nav bar ----- */
@@ -19,7 +45,7 @@ body {
 .navbar {
     text-decoration: none;
     /* background-color: whitesmoke; */
-    background-color: #734a9c; 
+    background-color: var(--purple);
     padding: 1em;
 }
 
@@ -40,7 +66,6 @@ body {
     display: flex;
     flex-direction: row;
     padding: none;
-    background-color: rgba(248, 202, 237, 0.903);
 }
 
 img {
@@ -52,7 +77,7 @@ img {
 h1 {
     font-size: 3em;
     line-height: 1.3em;
-    color: #734a9c; 
+    color: var(--purple);
 }
 
 #bio-description {
@@ -68,29 +93,16 @@ h1 {
 
 #bio-profile {
     padding: 5em;
+    border-radius: 30em;
     /* border: 10px solid black; */
-}
-
-button {
-    background-color: #0c0c0c; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #734a9c; 
-    color: white;
 }
 
 /* ----- about ----- */
 
 #about {
     padding: 5em;
+    color: var(--purple);
+    background-color: #f2e6fdf3;
 }
 
 #about > * {
@@ -100,13 +112,14 @@ button:hover {
 /* ----- portfolio ----- */
 
 #portfolio {
+    color: white;
     padding-top: 3em;
     padding-bottom: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: rgb(249, 248, 245);
+    background-color: var(--purple);
 }
 
 #cards {
@@ -118,16 +131,61 @@ button:hover {
 }
 
 .project-card {
-    border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-width: 2px;
-    border-style:dashed;
     padding: 2em;
     margin: 2em;
     min-width: 300px;
+    border-radius: 2em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    color: var(--purple);
+}
+
+.project-card:hover {
+   transform: scale(1.05);
+   transition: all 0.2s;
 }
 
 .project-card > * {
     margin-top: 0.6em;
+}
+
+.project-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-color: var(--purple);
+}
+
+button .project-button:hover {
+    background-color: white;
+}
+
+.project-button a {
+    text-decoration: none;
+    color: var(--purple);
+}
+
+.github {
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: 0.5em;
+}
+
+.project-photo {
+    max-width: 17em;
+    max-height: 15em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+h2 {
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
 }
 
 /* ----- smaller desktop & mobile ----- */
